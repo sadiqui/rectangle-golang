@@ -7,13 +7,13 @@ func QuadA(x, y int) {
 		return
 	}
 
-	for i := 0; i < y; i++ {
-		for j := 0; j < x; j++ {
-			if (i == 0 || i == y-1) && (j == 0 || j == x-1) {
+	for row := 1; row <= y; row++ {
+		for col := 1; col <= x; col++ {
+			if (row == 1 || row == y) && (col == 1 || col == x) {
 				fmt.Print("o")
-			} else if i == 0 || i == y-1 {
+			} else if row == 1 || row == y {
 				fmt.Print("-")
-			} else if j == 0 || j == x-1 {
+			} else if col == 1 || col == x {
 				fmt.Print("|")
 			} else {
 				fmt.Print(" ")
