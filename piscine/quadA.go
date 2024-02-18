@@ -9,17 +9,16 @@ func QuadA(x, y int) {
 
 	for i := 0; i < y; i++ {
 		for j := 0; j < x; j++ {
-			if i == 0 || i == y-1 || j == 0 || j == x-1 {
+			if (i == 0 || i == y-1) && (j == 0 || j == x-1) {
 				fmt.Print("o")
-			} else if i == 1 && (j > 0 && j < x-1) {
+			} else if i == 0 || i == y-1 {
 				fmt.Print("-")
-			} else if i > 1 && i < y-1 && (j == 1 || j == x-2) {
+			} else if j == 0 || j == x-1 {
 				fmt.Print("|")
 			} else {
 				fmt.Print(" ")
 			}
 		}
 		fmt.Println()
-
 	}
 }
