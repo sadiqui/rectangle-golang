@@ -4,7 +4,7 @@ import "fmt"
 
 func QuadA(x, y int) {
 	if x <= 0 || y <= 0 {
-		return
+		return // exit
 	}
 
 	for row := 1; row <= y; row++ {
@@ -22,3 +22,14 @@ func QuadA(x, y int) {
 		fmt.Println()
 	}
 }
+
+// o---o
+// |   |
+// o---o
+// o---o
+// o
+// o
+// |
+// |
+// |
+// o

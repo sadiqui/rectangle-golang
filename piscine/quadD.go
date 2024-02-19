@@ -1,5 +1,35 @@
 package piscine
 
+import "fmt"
+
 func QuadD(x, y int) {
-	// the function body
+	if x <= 0 || y <= 0 {
+		return // exit
+	}
+
+	for row := 1; row <= y; row++ {
+		for col := 1; col <= x; col++ {
+			if (row == 1 && col == 1) || (row == y && col == 1) {
+				fmt.Print("A")
+			} else if (row == 1 && col == x) || (row == y && col == x) {
+				fmt.Print("C")
+			} else if row == 1 || row == y || col == 1 || col == x {
+				fmt.Print("B")
+			} else {
+				fmt.Print(" ")
+			}
+		}
+		fmt.Println()
+	}
 }
+
+// ABBBC
+// B   B
+// ABBBC
+// ABBBC
+// A
+// A
+// B
+// B
+// B
+// A
