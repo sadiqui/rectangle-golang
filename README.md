@@ -1,4 +1,4 @@
-# **Piscine-GO: Drawing Rectangles**
+# **Drawing Rectangles**
 
 This project is part of the Piscine-GO programming course and focuses on drawing rectangles using the Go programming language. The goal is to write functions that can generate different types of rectangles based on given width and height values.
 
